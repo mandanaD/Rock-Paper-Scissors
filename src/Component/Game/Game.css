@@ -1,0 +1,421 @@
+.container {
+    min-height: 100vh;
+    /*background: radial-gradient(rgb(33, 53, 86), #171f41) fixed center;*/
+    background: radial-gradient(rgb(121, 14, 22), #171f41) fixed center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: end;
+    background-size: cover;
+    object-fit: cover;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.Board-container {
+    max-width: 80rem;
+    height: 100%;
+    margin-inline: auto;
+    place-items: center;
+}
+
+.score {
+    padding: 1rem;
+    width: 60%;
+    border: hsl(var(--clr-white)/.4) solid 4px;
+    justify-content: space-between;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.sc {
+    width: 8rem;
+    height: 6rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.sc p {
+    color: hsl(228, 45%, 44%);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-shadow: #2945c1 1px 1px 1px;
+}
+
+.sc div {
+    font-size: 3.5rem;
+    color: hsl(var(--clr-black)/.7);
+    font-weight: bold;
+}
+
+.sign {
+    background: url("../../assets/images/bg-triangle.svg") no-repeat bottom;
+    width: 30rem;
+    height: 27rem;
+    background-size: 70%;
+}
+
+.btn {
+    width: 11rem;
+    aspect-ratio: 1;
+    border: transparent;
+    margin: 1px;
+    border-radius: 50%;
+    position: relative;
+    text-align: center;
+}
+
+.btn div {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 7px 0 #d3d3d3 inset;
+}
+#winner div .wave{
+    position: relative;
+    z-index: -1;
+    margin: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: hsl(var(--clr-white));
+}
+.one{
+    animation: wave 4500ms infinite ease-out;
+}
+.two{
+    animation: wave 4500ms infinite ease-out;
+}
+.tree{
+    animation: wave 4500ms infinite ease-out;
+}
+@keyframes wave {
+    from{
+        transform: scale(1);
+        opacity: 0.5;
+
+    }
+    to{
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+.paper {
+    position: relative;
+    cursor: pointer;
+    top: 12%;
+    right: 20%;
+    background: #4c67f0;
+    box-shadow: 0 7px 0 #2945c1;
+}
+
+.paper div {
+    background: url("../../assets/images/icon-paper.svg") no-repeat white center;
+}
+
+.scissors {
+    cursor: pointer;
+    position: relative;
+    top: 12%;
+    right: 4%;
+    background: #e9a21f;
+    box-shadow: 0 7px 0 #c66c1a;
+}
+
+.scissors div {
+    background: url("../../assets/images/icon-scissors.svg") no-repeat white center;
+}
+
+.rock {
+    cursor: pointer;
+    position: relative;
+    top: 20%;
+    right: 31%;
+    background: #e23253;
+    box-shadow: 0 7px 0 #9d1734;
+}
+
+.rock div {
+    background: url("../../assets/images/icon-rock.svg") no-repeat white center;
+}
+
+.rules {
+    width: 8rem;
+    height: 2.5rem;
+    background: transparent;
+    border: hsl(var(--clr-white)/.5) 2px solid;
+    border-radius: 7px;
+    margin-right: 2rem;
+    font-family: "Barlow Condensed", sans-serif;
+    letter-spacing: 2.7px;
+    font-size: 1rem;
+    transition: .2s all linear;
+    cursor: pointer;
+}
+
+.rules:hover {
+    border: hsl(var(--clr-white)/1) 2px solid;
+}
+
+.user {
+    height: 27rem;
+    display: grid;
+    align-items: center;
+    justify-items: stretch;
+    align-content: space-evenly;
+    transition: width ease-out .3s;
+    text-align: center;
+}
+
+.up {
+    text-align: center;
+    font-size: 1.5rem;
+    color: hsl(var(--clr-white));
+    display: flex;
+    width: 86%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+}
+.result{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    transition: .4s linear all;
+}
+.result button{
+    width: 11rem;
+    height: 2.5rem;
+    border-radius: 8px;
+    border: transparent;
+    color: rgba(226, 50, 83, 0.89);
+    font-weight: bold;
+    font-family: inherit;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.chosen-paper {
+    background: #4c67f0;
+    box-shadow: 0 7px 0 #2945c1;
+    width: 13rem;
+    aspect-ratio: 1;
+}
+
+.chosen-paper div {
+    background: url("../../assets/images/icon-paper.svg") no-repeat white center;
+    background-size: 40%;
+}
+
+.chosen-scissors {
+    background: #e9a21f;
+    box-shadow: 0 7px 0 #c66c1a;
+    width: 13rem;
+    aspect-ratio: 1;
+}
+
+.chosen-scissors div {
+    background: url("../../assets/images/icon-scissors.svg") no-repeat white center;
+    background-size: 40%;
+}
+
+.chosen-rock {
+    background: #e23253;
+    box-shadow: 0 7px 0 #9d1734;
+    width: 13rem;
+    aspect-ratio: 1;
+}
+
+.chosen-rock div {
+    background: url("../../assets/images/icon-rock.svg") no-repeat white center;
+    background-size: 40%;
+}
+.on{
+    width: 45rem
+}
+.off{
+    width: 30rem
+}
+.null {
+    width: 11rem;
+    aspect-ratio: 1;
+    margin: 1px;
+    border-radius: 50%;
+    background: hsl(var(--clr-black)/.4);
+
+}
+
+@media (min-width: 35rem) and (max-width: 55rem) {
+    .container {
+        text-align: center;
+    }
+
+    .score {
+        width: 80%;
+    }
+
+    .sign {
+        margin-top: 1rem;
+        background: url("../../assets/images/bg-triangle.svg") no-repeat center;
+        background-size: 60%;
+    }
+
+    .on{
+        width: 34rem
+    }
+    .off{
+        width: 30rem
+    }
+    .result button{
+        width: 10rem;
+    }
+    .result{
+        font-size: 2.5rem;
+    }
+    .btn {
+        width: 10rem;
+    }
+
+    .null {
+        width: 10rem;
+    }
+
+    .paper {
+        top: 5%;
+        right: 6%;
+    }
+
+    .scissors {
+        top: 5%;
+        left: 7%;
+    }
+
+    .rock {
+        top: 10%;
+        left: 0;
+    }
+
+    .rules {
+        margin-right: 0;
+    }
+
+    .chosen-scissors, .chosen-rock, .chosen-paper {
+        width: 11rem;
+    }
+}
+
+@media (max-width: 35rem) {
+    .container {
+        /*background: radial-gradient(rgb(25, 121, 14), #171f41);*/
+        text-align: center;
+    }
+
+    .Board-container {
+        width: 100%;
+    }
+
+    .score img {
+        height: 4rem;
+    }
+
+    .sc {
+        width: 6rem;
+        height: 4rem;
+        border-radius: 8px;
+        text-align: center;
+        padding: 2px;
+        line-height: 1.5rem;
+    }
+
+    .sc p {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .sc div {
+        font-size: 2.5rem;
+        color: hsl(var(--clr-black)/.7);
+        font-weight: bold;
+    }
+
+    .score {
+        width: 80%;
+    }
+
+    .sign {
+        margin-top: 1rem;
+        background: url("../../assets/images/bg-triangle.svg") no-repeat center;
+        background-size: 75%;
+        width: 20rem;
+    }
+
+    .on{
+        width: 90%
+    }
+    .off{
+        width: 19rem
+    }
+    .btn {
+        width: 8rem;
+    }
+
+    .null {
+        width: 8rem;
+    }
+
+    .paper {
+        top: 13%;
+        right: 6%;
+    }
+
+    .scissors {
+        top: 13%;
+        left: 8%;
+    }
+
+    .rock {
+        top: 16%;
+        left: 1%;
+    }
+
+    .rules {
+        margin-right: 0;
+        margin-top: 1rem;
+    }
+
+    .user div {
+        font-size: 1.2rem;
+    }
+    .user{
+        align-content: center;
+        height: 30rem;
+        gap: 1rem;
+    }
+    .chosen-scissors, .chosen-rock, .chosen-paper {
+        width: 9rem;
+    }
+
+    .down {
+        order: 1;
+        justify-content: space-between;
+    }
+    .up {
+        order: 2;
+    }
+    .result{
+        width: 90%;
+        position: absolute;
+        top: 73%;
+        order: 3;
+        margin-inline: auto;
+    }
+    .result div{
+        font-size:3rem ;
+    }
+}

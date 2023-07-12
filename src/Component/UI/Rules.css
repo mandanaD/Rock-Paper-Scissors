@@ -1,0 +1,54 @@
+.rules-container {
+    min-height: 100vh;
+    background: hsl(var(--clr-black)/.6);
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.rule {
+    margin: auto;
+    width: 24rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.top{
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+.top div{
+    font-size: 2rem;
+    color: hsl(var(--clr-black)/.7);
+    text-transform: uppercase;
+}
+.close {
+    width: 2rem;
+    aspect-ratio: 1;
+    background: url("../../assets/images/icon-close.svg") transparent center no-repeat;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width: 33rem) {
+    .rule {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        justify-items: center;
+        align-content: stretch;
+        padding: 1rem;
+    }
+    .rule img{
+        max-width: 93%;
+    }
+    .close {
+       position: absolute;
+        bottom: 5%;
+        left: 46%;
+    }
+}
