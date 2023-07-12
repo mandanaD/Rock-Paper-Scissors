@@ -8,6 +8,6 @@ This is a responsive website based on a challenge from [Frontend Mentor](https:/
 ## Features
 - first, you can click on one of the three icons (rock, paper, or scissors) to make your choice.
 - then, you can see your choice and the computer’s choice, as well as the result of the game (win, lose, or draw).
-- On the top of the screen, you can also see your score, which are updated after each round.
+- On the top of the screen, you can also see your score, which is updated after each round.
 - You can click on the play again button to start a new round.
 - The website is designed to be responsive and adapt to different screen sizes.
